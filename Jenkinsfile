@@ -2,7 +2,7 @@ pipeline {
   agent none
 
   environment {
-    IMAGE_NAME = 'prydonius/node-todo'
+    IMAGE_NAME = 'dbourdon/node-todo'
   }
 
   stages {
@@ -47,7 +47,7 @@ pipeline {
 
       environment {
         RELEASE_NAME = 'todos-staging'
-        SERVER_HOST = 'todos.staging.k8s.prydoni.us'
+        SERVER_HOST = 'todos.staging.k8s.db.ca'
       }
 
       steps {
@@ -79,7 +79,7 @@ pipeline {
 
       environment {
         RELEASE_NAME = 'todos-production'
-        SERVER_HOST = 'todos.k8s.prydoni.us'
+        SERVER_HOST = 'todos.k8s.db.ca'
       }
 
       steps {
